@@ -21,7 +21,7 @@ class ApplicationController < Sinatra::Base
     else
       erb :error
     end
-    binding.pry
+  #  binding.pry
   end
 
   get '/account' do
