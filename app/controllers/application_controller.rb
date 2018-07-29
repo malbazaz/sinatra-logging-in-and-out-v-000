@@ -16,7 +16,7 @@ class ApplicationController < Sinatra::Base
     @user = User.find_by_username(params[:username])
     session[:user_id] = @user.id
     #binding.pry
-    if @user
+    if User.current_user(session)
       redirect '/account'
     else
       erb :error
