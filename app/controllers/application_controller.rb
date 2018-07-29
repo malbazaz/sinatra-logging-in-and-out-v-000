@@ -19,6 +19,7 @@ class ApplicationController < Sinatra::Base
     if @user
       redirect '/account'
     else
+      puts "Mo"
       erb :error
     end
   #  binding.pry
